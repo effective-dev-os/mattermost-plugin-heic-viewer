@@ -1,4 +1,4 @@
-module github.com/mattermost/mattermost-plugin-starter-template
+module github.com/effective-dev-os/mattermost-plugin-heic-viewer
 
 go 1.25
 
