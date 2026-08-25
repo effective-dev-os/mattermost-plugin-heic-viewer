@@ -2,8 +2,10 @@
   "private": true,
   "scripts": {
     "build": "webpack --mode=production",
+    "postbuild": "node scripts/copy-heic-worker.mjs",
     "build:watch": "webpack --mode=production --watch",
     "debug": "webpack --mode=none",
+    "postdebug": "node scripts/copy-heic-worker.mjs",
     "debug:watch": "webpack --mode=development --watch",
     "lint": "eslint --ignore-pattern node_modules --ignore-pattern dist --ext=.js,.jsx,tsx,ts . --quiet --cache",
     "fix": "eslint --ignore-pattern node_modules --ignore-pattern dist --ext=.js,.jsx,tsx,ts . --quiet --fix --cache",
@@ -43,6 +45,7 @@
     "eslint-plugin-react": "7.34.1",
     "eslint-plugin-react-hooks": "4.6.0",
     "file-loader": "6.2.0",
+    "heic-to": "1.5.2",
     "identity-obj-proxy": "3.0.0",
     "isomorphic-fetch": "3.0.0",
     "jest": "27.4.7",
@@ -69,7 +72,7 @@
     ],
     "clearMocks": true,
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx}"
+      "src/**/*.{js,jsx,ts,tsx}"
     ],
     "coverageReporters": [
       "lcov",

@@ -85,7 +85,7 @@ const config = {
     output: {
         devtoolNamespace: PLUGIN_ID,
         path: path.join(__dirname, '/dist'),
-        publicPath: '/',
+        publicPath: 'auto',
         filename: 'main.js',
     },
     mode: (isDev) ? 'eval-source-map' : 'production',
